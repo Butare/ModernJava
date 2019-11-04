@@ -3,11 +3,9 @@ package chapter1.passingcode.example;
 import java.util.ArrayList;
 import java.util.List;
 
-
 // extends Apple class for simplicity.
 public class AppleManualPredicate extends Apple {
 
-  
   public static List<Apple> filterApples(List<Apple> apples, AppleFilter filter){
     List<Apple> result = new ArrayList<>();
     for (Apple apple : apples) {
@@ -17,7 +15,6 @@ public class AppleManualPredicate extends Apple {
     }
     return result;
   }
-  
   
   // test
   public static void main(String[] args) {
@@ -29,7 +26,7 @@ public class AppleManualPredicate extends Apple {
     }
     
     List<Apple> heavyApples = filterApples(inventories, 
-                                  apple -> apple.getWeight() > 150.0);
+                                  apple -> apple.getWeight() > HEAVY_WEIGHT);
     for (Apple apple : heavyApples) {
       System.out.println(apple.getWeight());
     }
