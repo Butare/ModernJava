@@ -31,6 +31,11 @@ public class Apple {
     return weight;
   }
   
+  @Override
+  public String toString() {
+    return String.format("Color: %s , Weight: %.2f", this.color, this.weight);
+  }
+  
   
   enum Color {
     GREEN, RED
